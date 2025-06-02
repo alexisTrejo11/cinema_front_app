@@ -1,0 +1,81 @@
+<section class="py-20 bg-[rgb(26,26,46)] relative overflow-hidden">
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Contenido de texto -->
+      <div class="space-y-8">
+        <h2 class="text-4xl md:text-5xl font-bold text-white animate-on-scroll">
+          Premium Cinema Experience
+        </h2>
+        
+        <div class="space-y-6">
+          <!-- Característica 1 -->
+          <div class="flex items-start space-x-4 animate-on-scroll" [style.animation-delay]="'200ms'">
+            <div class="w-12 h-12 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-white text-xl">🎬</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-2">4K Ultra HD Projection</h3>
+              <p class="text-gray-400">Experience movies in stunning 4K resolution with HDR support for the most vivid and lifelike picture quality.</p>
+            </div>
+          </div>
+          
+          <!-- Característica 2 -->
+          <div class="flex items-start space-x-4 animate-on-scroll" [style.animation-delay]="'400ms'">
+            <div class="w-12 h-12 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-white text-xl">🔊</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-2">Dolby Atmos Sound</h3>
+              <p class="text-gray-400">Immerse yourself in three-dimensional sound that moves around you for a truly cinematic audio experience.</p>
+            </div>
+          </div>
+          
+          <!-- Característica 3 -->
+          <div class="flex items-start space-x-4 animate-on-scroll" [style.animation-delay]="'600ms'">
+            <div class="w-12 h-12 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-lg flex items-center justify-center flex-shrink-0">
+              <span class="text-white text-xl">🛋️</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-2">Luxury Seating</h3>
+              <p class="text-gray-400">Relax in our premium reclining seats with extra legroom and personal cup holders for ultimate comfort.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Botón -->
+        <button 
+          (click)="navigateToTheaters()"
+          class="bg-amber-500 hover:bg-amber-600 text-white font-semibold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg hover:shadow-amber-500/30 animate-on-scroll" 
+          [style.animation-delay]="'800ms'">
+          Explore Our Theaters
+        </button>
+      </div>
+      
+      <!-- Imagen con estadísticas flotantes -->
+      <div class="relative">
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl animate-on-scroll">
+          <img 
+            src="https://images.unsplash.com/photo-1489599032373-a4c25d5e6d48?w=800&h=600&fit=crop" 
+            alt="Premium Theater" 
+            class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Estadística flotante 1 -->
+        <div class="absolute -top-8 -right-8 bg-gray-800 rounded-xl p-6 shadow-2xl animate-float">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-amber-500">12</div>
+            <div class="text-gray-400 text-sm">Premium Theaters</div>
+          </div>
+        </div>
+        
+        <!-- Estadística flotante 2 -->
+        <div class="absolute -bottom-8 -left-8 bg-gray-800 rounded-xl p-6 shadow-2xl animate-float animation-delay-1000">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-amber-500">4K</div>
+            <div class="text-gray-400 text-sm">Ultra HD Quality</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

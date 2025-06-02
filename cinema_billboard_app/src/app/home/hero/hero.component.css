@@ -1,0 +1,57 @@
+.btn-primary {
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  color: #1c1917;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(251, 191, 36, 0.4);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid #fbbf24;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-secondary:hover {
+  background: rgba(251, 191, 36, 0.1);
+  transform: scale(1.05);
+}
+
+
+button {
+  cursor: pointer !important;
+}
+
+.floating-element {
+  pointer-events: none;
+  z-index: 5;
+}
+
+.btn-primary, .btn-secondary {
+  z-index: 20;
+  position: relative;
+}
+
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary:active {
+  transform: scale(0.95);
+}

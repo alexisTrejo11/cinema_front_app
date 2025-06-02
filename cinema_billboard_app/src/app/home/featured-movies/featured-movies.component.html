@@ -1,0 +1,62 @@
+<section class="py-20 bg-[rgb(26,26,46)]">
+  <div class="container mx-auto px-4">
+    <!-- Encabezado -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 animate-on-scroll">
+        Featured Movies
+      </h2>
+      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+        Discover the latest blockbusters and critically acclaimed films
+      </p>
+    </div>
+    
+    <!-- Grid de películas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (movie of featuredMovies; track $index) {
+      <div 
+        class="movie-card group cursor-pointer"
+        [style.animation-delay]="($index * 200) + 'ms'"
+        (click)="selectMovie(movie)">
+        
+        <div class="relative overflow-hidden rounded-2xl bg-gray-800 shadow-2xl transform group-hover:scale-105 transition-all duration-500">
+          <div class="relative overflow-hidden">
+            <img 
+              [src]="movie.poster_url || 'https://images.unsplash.com/photo-1489599032373-a4c25d5e6d48?w=400'" 
+              [alt]="movie.title"
+              class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700">
+            
+            <!-- Overlay hover -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <!-- Info de película (aparece al hover) -->
+            <div class="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+              <h3 class="text-xl font-bold text-white mb-2">{{ movie.title }}</h3>
+              <p class="text-gray-300 text-sm mb-3 line-clamp-2">{{ movie.description }}</p>
+              <div class="flex items-center justify-between">
+                <span class="bg-amber-500 text-white text-xs px-2 py-1 rounded-full">{{ movie.rating }}</span>
+                <span class="text-gray-400 text-sm">{{ movie.minute_duration }} min</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Botón flotante -->
+          <div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <button class="w-12 h-12 bg-amber-500 hover:bg-amber-600 rounded-full flex items-center justify-center text-white transform hover:scale-110 transition-all duration-200">
+              ▶️
+            </button>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+    
+    <!-- Botón ver todas -->
+    <div class="text-center mt-12">
+      <button 
+        (click)="navigateToMovies()"
+        class="bg-amber-500 hover:bg-amber-600 text-white font-semibold text-lg px-8 py-4 rounded-full transition-all hover:scale-105 shadow-lg hover:shadow-amber-500/30">
+        View All Movies
+      </button>
+    </div>
+  </div>
+</section>

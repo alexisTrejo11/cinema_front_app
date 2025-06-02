@@ -1,0 +1,58 @@
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background Video/Image -->
+    <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-cinema-dark/90 via-cinema-primary/80 to-cinema-dark/90 z-10"></div>
+        <img 
+        src="/cinema-hero.jpg" 
+        alt="Cinema Background" 
+        class="w-full h-full object-cover animate-slow-zoom">
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="absolute inset-0 z-5">
+        <div class="floating-element absolute top-20 left-10 w-4 h-4 bg-cinema-accent rounded-full opacity-70"></div>
+        <div class="floating-element absolute top-40 right-20 w-6 h-6 bg-cinema-gold rounded-full opacity-50 animation-delay-1000"></div>
+        <div class="floating-element absolute bottom-40 left-20 w-3 h-3 bg-cinema-accent rounded-full opacity-60 animation-delay-2000"></div>
+        <div class="floating-element absolute bottom-20 right-40 w-5 h-5 bg-cinema-gold rounded-full opacity-40 animation-delay-3000"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="relative z-20 text-center px-4 max-w-5xl mx-auto">
+        <div class="hero-content">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-display font-bold mb-6 leading-tight">
+                <span class="block text-gradient animate-slide-up">Cinema</span>
+                <span class="block text-white animate-slide-up animation-delay-500">Experience</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-cinema-light/80 mb-8 max-w-3xl mx-auto animate-fade-in animation-delay-1000">
+                Immerse yourself in the magic of movies with premium sound, stunning visuals, and unparalleled comfort
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in animation-delay-1500">
+                <button 
+                (click)="navigateToMovies()"
+                class="btn-primary text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    <span class="flex items-center space-x-3">
+                        <span class="text-xl">🎬</span>
+                        <span>Browse Movies</span>
+                    </span>
+                </button>
+                
+                <button 
+                (click)="navigateToShowtimes()"
+                class="btn-secondary text-lg px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105">
+                    <span class="flex items-center space-x-3">
+                        <span class="text-xl">🎭</span>
+                        <span>View Showtimes</span>
+                    </span>
+                </button>
+            </div>
+        </div>    
+    </div>
+     <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-10 h-16 border-2 border-cinema-accent rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-cinema-accent rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+</section>

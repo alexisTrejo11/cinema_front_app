@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Movie } from '../../models/movie.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-featured-movies',
@@ -10,19 +11,13 @@ import { Movie } from '../../models/movie.model';
 export class FeaturedMoviesComponent {
   featuredMovies:Movie[] = []
 
+  constructor(private router: Router) {}
+
   selectMovie(movie: any) {
 
   }
-
-  navigateToTheaters(){
-
- }
-
-  navigateToShowtimes() {
-    
-  }
   
   navigateToMovies() {
-
+    this.router.navigate(['movies'])
   }
 }

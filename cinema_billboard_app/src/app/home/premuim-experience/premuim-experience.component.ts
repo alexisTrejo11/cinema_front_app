@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Movie } from '../../models/movie.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-premuim-experience',
@@ -10,19 +11,9 @@ import { Movie } from '../../models/movie.model';
 export class PremuimExperienceComponent {
   featuredMovies:Movie[] = []
 
-  selectMovie(movie: any) {
-
-  }
+  constructor(private router:Router) {}
 
   navigateToTheaters(){
-
- }
-
-  navigateToShowtimes() {
-    
-  }
-  
-  navigateToMovies() {
-
+    this.router.navigate(['/theaters'])
   }
 }

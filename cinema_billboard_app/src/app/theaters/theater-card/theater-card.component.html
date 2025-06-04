@@ -1,0 +1,53 @@
+<div class="bg-gray-800 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-amber-500/20 transition-all duration-300">
+    <div class="relative h-48">
+        <img 
+        [src]="cinema().image" 
+        [alt]="cinema().name"
+        class="w-full h-full object-cover">
+        <div class="absolute top-4 right-4 bg-amber-500 text-gray-900 text-xs px-2 py-1 rounded-full font-bold">
+        Open
+        </div>
+    </div>
+
+    <div class="p-6">
+        <div class="flex justify-between items-start mb-2">
+            <h3 class="text-xl font-bold text-white">{{ cinema().name }}</h3>
+            <span class="bg-gray-700 text-amber-400 text-xs px-2 py-1 rounded">{{ cinema().type }}</span>
+        </div>
+
+
+        <div class="flex items-center text-center text-gray-400 text-sm mb-4">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg> 
+        {{ cinema().address }}
+        </div>
+                                
+        <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">4K</span>
+            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">Dolby Atmos</span>
+            <span class="bg-gray-700 text-gray-300 text-xs px-2 py-1 rounded">Butacas VIP</span>
+        </div>
+        
+        <div class="space-y-3">
+            <div class="flex justify-between text-sm">
+                <span class="text-gray-400">Contact:</span>
+                <a href="mailto:info@cinecapital.com" class="text-amber-400 hover:underline">{{ cinema().email_contact }}</a>
+            </div>
+
+            <div class="flex justify-between text-sm">
+                <span class="text-gray-400">NIT:</span>
+                <span class="text-gray-300">{{  cinema().phone }}</span>
+            </div>
+            <div class="flex justify-between text-sm">
+                <span class="text-gray-400">Horario:</span>
+                <span class="text-gray-300">10:00 AM - 11:00 PM</span>
+            </div>
+        </div>
+
+        <button class="w-full mt-6 bg-amber-500 hover:bg-amber-600 text-gray-900 font-medium py-2 rounded-lg transition-colors">
+            See showtimes and schedules
+        </button>
+    </div>
+</div>

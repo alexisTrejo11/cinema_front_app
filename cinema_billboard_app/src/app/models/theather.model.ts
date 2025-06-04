@@ -14,4 +14,4 @@ export interface Theater {
   theater_type: TheaterType;
   is_active: boolean;
   maintenance_mode: boolean;
-}s
+}
